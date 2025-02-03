@@ -85,20 +85,25 @@
     color: white;
     padding: 0px 5px;
     display: flex;
+    /* flex-wrap: wrap; */
 }
 .content_img{
     background-image: url(../img/behind-the-wheel-4789777_1280.jpg);
     min-height: 500px;
-    width: 50%;
+    width: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 2.5px;
 }
 .content_word{
-    min-height: 500px;
+    height: 500px;
     width: 100%;
     padding: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    /* align-items: center; */
+    justify-content: center;
 }
 .content_word p{
     margin-top: 10px;
@@ -119,4 +124,12 @@
         grid-template-columns: ;
     }
 } */
+@media only screen and (max-width: 580px){
+    .content_us{
+        flex-wrap: wrap;
+    }
+    .content_word{
+        height: auto;
+    }
+}
 
