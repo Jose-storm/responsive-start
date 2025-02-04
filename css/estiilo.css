@@ -132,4 +132,65 @@
         height: auto;
     }
 }
-
+/*Style in page Contact*/
+.contact_title{
+    padding: 10px;
+    background-color: #002333;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /* Syntax advanced with operator "&" */
+    & a{
+        background-color: #CCEA8D;
+        text-decoration: none;
+        border-radius: 50px;
+        color: black;
+        padding: 5px 20px;
+        font-weight: bold;
+    }
+}
+/* .contact_title a{
+    background-color: #CCEA8D;
+    text-decoration: none;
+    border-radius: 50px;
+    color: black;
+    padding: 5px 20px;
+    font-weight: bold;
+} */
+@media only screen and (max-width: 813px){
+    .contact_title a{
+        display: inline-block;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+.contact_title span{
+    text-decoration: underline;
+}
+.contact_nesting{
+    min-height: 800px;
+    background-color: #9FC131;
+    /* Anidado fragmento de código "Css Nesting Native" */
+    /* .cellphone{
+        min-height: 300px;
+        background-color: #cddddc;
+    } */
+    /* Sin el operador "&" se aplican los cambios :hover a los elementos dentro del elemento
+    (hijos) */
+    &:hover{
+        background-color: rgb(32, 47, 47);
+    }
+}
+/* Anidación de reglas @media para reducir código directamente al elemento para su modificación */
+.cellphone{
+    width: 100%;
+    height: 500px;
+    background-color: blueviolet;
+    @media only screen and (max-width: 813px){
+        background-color: coral;
+    }
+}
